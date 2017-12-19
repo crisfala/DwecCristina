@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>pasarelapago ejercicio 4</title>
+</head>
+
+<body>
+<form name="formulario">
+    <p>
+        <label name="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre"/>
+    </p>
+    <p>
+        <label name="apellido">Nombre:</label>
+        <input type="text" name="nombre" id="nombre"/>
+    </p>
+    
+    <p>
+        <label for="titulacion">Titulación:</label>
+        <select name="titulacion" id="titulacion">
+            <option value="primaria" selected>Primaria</option>
+            <option value="eso">ESO</option>
+            <option value="bachillerato">Bachillerato</option>
+            <option value="FP">FP</option>
+        </select>
+    </p>
+    
+    <p>
+         <label for="curso">Curso:</label>
+        <select name="curso" id="curso">
+            <option value="primero" selected>Primero</option>
+            <option value="segundo">Segundo</option>
+            <option value="tercero">tercero</option>
+            <option value="cuarto">Cuarto</option>
+            
+        </select>
+     </p>
+    
+    <p>
+        <label name="AnioAcademico">Año Academico</label>
+        <input type="text" name="AnioAcademico" id="AnioAcademico" onblur="comprobarAnio()"/>
+    </p><br />
+    
+        <input type="submit" value="enviar" />
+</form>  
+
+
+</body>
+</html>

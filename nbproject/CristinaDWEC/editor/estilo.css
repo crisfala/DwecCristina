@@ -1,0 +1,20 @@
+.opciones{
+    width: 800px;
+    border: 2px #000000 solid;
+    background-color: #842F84;
+    
+}
+
+#textbox{
+     width: 700px;
+    height: 400px;
+    border: 2px #000000 solid;
+    padding: 10px;
+    overflow: scroll;
+    background-color: #E5D3E5;
+}
+h2{
+    font-family: fantasy;
+    color: #842F84;
+    text-align: left;
+}

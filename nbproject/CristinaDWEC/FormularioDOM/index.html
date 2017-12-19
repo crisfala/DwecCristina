@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/estilos.css">
+ 
+</head>
+
+
+<body>
+	<script>
+	
+		var formulario = document.createElement("form");
+		formulario.setAttribute("id","primero");
+		formulario.setAttribute("oninput","calcula();");
+		document.body.appendChild(formulario);
+		
+		var x = document.createTextNode("Introduzca nombre:");
+		document.getElementById("primero").appendChild(x);
+		
+		var inputNombre = document.createElement("input");
+		inputNombre.setAttribute("type","text");
+		inputNombre.setAttribute("name","nombre");
+		document.getElementById("primero").appendChild(inputNombre);
+		
+		var br1 = document.createElement("br");
+		document.getElementById("primero").appendChild(br1);
+		
+		var y = document.createTextNode("Introduzca su edad:");
+		document.getElementById("primero").appendChild(y);
+		
+		var inputEdad = document.createElement("input");
+		inputEdad.setAttribute("type","number");
+		inputEdad.setAttribute("name","edad");
+		inputEdad.setAttribute("value","18");
+		inputEdad.setAttribute("min","18");
+		inputEdad.setAttribute("max","99");
+		document.getElementById("primero").appendChild(inputEdad);
+		
+		var br2 = document.createElement("br");
+		document.getElementById("primero").appendChild(br2);
+		
+		var z = document.createTextNode("Valoracion");
+		document.getElementById("primero").appendChild(z);
+		
+		var inputValoracion = document.createElement("input");
+		inputValoracion.setAttribute("type","range");
+		inputValoracion.setAttribute("name","valoracion");
+		inputValoracion.setAttribute("value","5");
+		inputValoracion.setAttribute("min","0");
+		inputValoracion.setAttribute("max","10");
+		document.getElementById("primero").appendChild(inputValoracion);
+		
+		var salida = document.createElement("output");
+		salida.setAttribute("name","salida");
+		salida.setAttribute("for","valoracion");
+		salida.innerHTML = "0";
+		document.getElementById("primero").appendChild(salida);
+		
+		var br3 = document.createElement("br");
+		document.getElementById("primero").appendChild(br3);
+		
+		var leef = document.createElement("input");
+		leef.setAttribute("type","file");
+		leef.setAttribute("name","leef");
+		document.getElementById("primero").appendChild(leef);
+		
+		
+		function calcula(){
+			salida.innerHTML = parseInt(inputValoracion.value)*100;
+		}
+		
+		
+		
+	</script>
+</body>
+</html>

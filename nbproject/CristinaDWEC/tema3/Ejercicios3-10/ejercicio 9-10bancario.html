@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Ejercicio 9 y 10</title>
+   
+</head>
+
+<body>
+     <script type="text/javascript">
+        function getDC_1(entidad, oficina) {
+            var primerDigito = 0;
+            var total = (entidad[0] * 4) + (entidad[1] * 8) + (entidad[2] * 5) + (entidad[3] * 10) + (oficina[0] * 9) + (oficina[1] * 7) + (oficina[2] * 3) + (oficina[3] * 6);
+            var resto = total % 11;
+            primerDigito = 11 - resto;
+            if (primerDigito === 10) {
+                primerDigito = 1;
+            } else if (primerDigito === 11) {
+                primerDigito = 0;
+            }
+            return primerDigito;
+        }
+
+        function getDC_2(numCuenta) {
+            var segundoDigito = 0;
+            var total = (numCuenta[0] * 1) + (numCuenta[1] * 2) + (numCuenta[2] * 4) + (numCuenta[3] * 8) + (numCuenta[4] * 5) + (numCuenta[5] * 10) + (numCuenta[6] * 9) + (numCuenta[7] * 7) + (numCuenta[8] * 3) + (numCuenta[9] * 6);
+            var resto = total % 11;
+            segundoDigito = 11 - resto;
+            if (segundoDigito === 10) {
+                segundoDigito = 1;
+            } else if (segundoDigito === 11) {
+                segundoDigito = 0;
+            }
+            return segundoDigito;
+        }
+
+        function calcularNumerosIBAN(numCuenta) {
+            var iban = (numCuenta % 97)+10;
+            return iban;
+        }
+
+        function getCodigoPais(pais) {
+            var codigo = "";
+            var letras = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            var letra1=(letras.search(pais[0]) + 10);
+            var letra2=(letras.search(pais[1]) + 10);
+            codigo=letra1+""+letra2;
+            return codigo;
+        }
+
+        var entidad = prompt("Introduce entidad (4 numeros)");
+        while (entidad.length !== 4) {
+            alert("¡Introduce 4 números!");
+            var entidad = prompt("Introduce entidad (4 numeros)");
+        }
+
+        var oficina = prompt("Introduce oficina (4 numeros)");
+        while (oficina.length !== 4) {
+            alert("¡Introduce 4 numeros!");
+            var oficina = prompt("Introduce oficina (4 numeros)");
+        }
+
+        var numCuenta = prompt("Introduce numero de cuenta (10 numeros)");
+        while (numCuenta.length !== 10) {
+            alert("¡Introduce 10 números!");
+            var numCuenta = prompt("Introduce numero de cuenta (10 numeros)");
+        }
+
+        var pais = prompt("Introduce codigo de pais (2 letras)");
+        pais.toUpperCase()
+        while (pais.length !== 2) {
+            alert("¡Introduce 2 letras!");
+            var pais = prompt("Introduce codigo de pais (2 letras)");
+        }
+
+        var codPaisIban = getCodigoPais(pais);
+        var dcTotal = getDC_1(entidad, oficina) + "" + getDC_2(numCuenta);
+        var ccc = entidad + oficina + dcTotal + numCuenta +codPaisIban+ "00";
+        parseFloat(ccc);
+
+        var numerosIban = calcularNumerosIBAN(ccc);
+
+        document.write("<strong>IBAN:</strong> " +pais+ numerosIban + " <strong>Entidad:</strong> " + entidad + " <strong>Oficina:</strong> " + oficina + " <strong>DC:</strong> " + dcTotal + " <strong>Numero de cuenta:</strong> " + numCuenta);
+
+    </script>
+</body>
+
+</html>

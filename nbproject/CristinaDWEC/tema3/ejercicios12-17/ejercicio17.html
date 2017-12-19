@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ejercicio 17</title>
+</head>
+
+<body>
+<h2>Crear una función RelojDigital(), que visualice en la ventana un reloj 
+digital que se actualiza cada 200 milisegundos. Se tiene que visualizar Hora:Minutos:segundos
+Se puede introducir en un formulario.</h2>
+<script type="text/javascript">
+    
+   function relojDigital(){
+     var hora=new Date()
+     document.write(hora.getHours()+":"+hora.getMinutes()+":"+hora.getSeconds());
+   }
+   function refresh() {
+    location.reload(true);
+    }
+   var tiempo=self.setInterval("refresh()",200);
+   relojDigital();
+</script>
+
+</body>
+</html>

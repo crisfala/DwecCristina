@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Supuesto 3</title>
+     <link href="estilo.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+      <script>
+        /*window.onload=function(){
+        editarFormato();
+        enlazar();
+        mostrarCodigo();
+        }*/
+        window.onerror=miError;
+         var msArray=new array();
+         var urlArray=new Array();
+         var lineaArray=new Array();
+        function miError (msg,url,linea){
+            msArray[msArray.length]=msg;
+            urlArray[msArray.length]=url;
+            lineaArray[msArray.length]=linea;
+            return true;
+        }
+       function formatoFuente(comando,valor){
+    document.execCommand(comando,false,valor);
+    }
+    function visualizarError(){
+    win2=window.open('','ventana2','scrollbar=yes');
+    win2.document.writeln('<strong>ERROR AL CARGAR</strong>');
+    for( i in msArray){
+        win2.writeln('<strong>ERROR</strong>'+i);
+    }
+    }
+    
+    
+         </script>
+</head>
+
+<body>
+    <h2>OBJ.Editro de texto con ID</h2>
+    <section class="opciones">
+        <button onclick="document.execCommand('bold',false,'');">negrita</button>
+        <button onclick="document.execCommand('italic',false,'');">cursiva</button>
+        <button onclick="document.execCommand('underline',false,'');">subrayado</button>
+        <select onchange="formatoFuente('formatBlock',this[this.selectedIndex].value);
+                this.selectedIndex=0;"><!--pendiente de evento .js-->
+        <option class="heading" selected>Formato</option>
+        <option value="<h1>">cabezera &lt;h1&gt;</option>
+        <option value="<h2>">cabezera &lt;h2&gt;</option>
+        <option value="<h3>">cabezera &lt;h3&gt;</option>
+        <option value="<h4>">cabezera &lt;h4&gt;</option>
+        <option value="<h5>">cabezera &lt;h5&gt;</option>
+        <option value="<h6>">cabezera &lt;h6&gt;</option>
+        <option value="<p>">parrafo &lt;p&gt;</option>
+        <option value="<pre>">preformato &lt;pre&gt;</option>
+        </select>
+        <button onclick="if(document.getElementById('tamanioUrl').checkValidity()){
+        document.execCommand('createLink',false,document.getElementById('tamanioUrl').value);}">Hipervinculo</button><!--pendiente de evento .js-->
+        <input type="url" id="tamanioURL" required/><!--pendiente de evento .js onchange-->
+        
+        <select  onchange="formatoFuente('forecolor',this[this.selectedIndex].value);
+                this.selectedIndex=0;"><!--pendiente de evento .js-->
+        <option class="heading" value="blue" selected>azul</option>
+        <option class="heading" value="#FF0022" selected>rojo</option>
+        <option class="heading" value="#38B769" selected>verde</option>
+        <option class="heading" value="#E9F40E" selected>amarillo</option>
+        <option class="heading" value="#E116FC" selected>rosa</option>
+        </select>
+        
+        <button onclick="document.execCommand('insertUnorderedList',false,'');">Punto lista</button>
+        <button onclick="document.execCommand('insertOrderedList',false,'');">numeracion lista</button>
+        <button onclick="document.execCommand('justifyLeft',false,'');"> izquierda</button>
+        <button onclick="document.execCommand('justifyCenter',false,'');">centrar</button>
+        <button onclick="document.execCommand('justifyRight',false,'');">derecha</button>
+        <button onclick="document.execCommand('cut',false,'');">cortar</button>
+        <button onclick="document.execCommand('copy',false,'');">copiar</button>
+        <button onclick="document.execCommand('paster',false,'');">pegar</button>
+        
+         <select>
+           <option class="heading" selected>Fuente</option>
+           <option value="1">muy pequeña</option>
+           <option value="2">pequeña</option>
+           <option value="3">normal</option>
+           <option value="4">mediana</option>
+           <option value="5">grande</option>
+           <option value="6">muyu grande</option>
+           <option value="7">enorme</option>
+        </select>
+         
+        <br>
+        <div id="textbox" contenteditable="true">
+        <h1 style="color:red;">Titulo mi editor</h1>
+        <p>Comienza a escribir aqui...</p>
+        </div>
+        <form>
+            <input type="button" value="tengo un eror" onclick="alert('error sin determinar')" name="button" >
+            <input type="button" value="ver error" onclick="visualizarError()">
+        </form>
+    </section>
+
+</body>
+</html>

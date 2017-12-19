@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <title>teclado</title>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+      <script src="teclado.js"></script>
+</head>
+
+<body onload="cargarValoresTeclas()">
+<form id="teclado">
+    <textarea rows="10" cols="100" id="areaEscritura" name="areaEscritura"></textarea><br/>
+ 
+    <input type="button" name="letraQ" value="Q" id="idQ" onclick="escribirCaracter(idQ.value)">
+    <input type="button" name="letraW" value="W" id="idW"onclick="escribirCaracter(idW.value)">
+    <input type="button" name="letraE" value="E" id="idE"onclick="escribirCaracter(idE.value)">
+    <input type="button" name="letraR" value="R"id="idR" onclick="escribirCaracter(idR.value)">
+    <input type="button" name="letraT" value="T"id="idT" onclick="escribirCaracter(idT.value)">
+    <input type="button" name="letraY" value="Y"id="idY" onclick="escribirCaracter(idY.value)">
+    <input type="button" name="letraU" value="U"id="idU" onclick="escribirCaracter(idU.value)">
+    <input type="button" name="letraI" value="I"id="idI" onclick="escribirCaracter(idI.value)">
+    <input type="button" name="letraO" value="O" id="idO"onclick="escribirCaracter(idO.value)">
+     <input type="button" name="letraP" value="P"id="idP" onclick="escribirCaracter(idP.value)">
+     
+     <br />
+    
+    <input type="button" name="letraA" value="A" id="idA" onclick="escribirCaracter(idA.value)">
+    <input type="button" name="letraS" value="S" id="idS" onclick="escribirCaracter(idS.value)">
+    <input type="button" name="letraD" value="D" id="idD" onclick="escribirCaracter(idD.value)">
+    <input type="button" name="letraF" value="F" id="idF" onclick="escribirCaracter(idF.value)">
+    <input type="button" name="letraG" value="G" id="idG" onclick="escribirCaracter(idG.value)">
+    <input type="button" name="letraH" value="H" id="idH" onclick="escribirCaracter(idH.value)">
+    <input type="button" name="letraJ" value="J" id="idJ" onclick="escribirCaracter(idJ.value)">
+    <input type="button" name="letraK" value="K" id="idK" onclick="escribirCaracter(idK.value)">
+    <input type="button" name="letraL" value="L" id="idL" onclick="escribirCaracter(idL.value)">
+    <input type="button" name="letraNN;" value="NN" id="idNN" onclick="escribirCaracter(idNN.value)">  
+      <br />
+    <input type="button" name="BOTONSHIFT" value="SHIFT" onclick="estadoMasMin()">
+    <input type="button" name="letraZ" value="Z" id="idZ" onclick="escribirCaracter(idZ.value)">
+    <input type="button" name="letraX" value="X" id="idX" onclick="escribirCaracter(idX.value)">
+    <input type="button" name="letraC" value="C" id="idC"onclick="escribirCaracter(idC.value)">
+    <input type="button" name="letraV" value="V" id="idV"onclick="escribirCaracter(idV.value)">
+    <input type="button" name="letraB" value="B" id="idB"onclick="escribirCaracter(idB.value)">
+    <input type="button" name="letraN" value="N" id="idN"onclick="escribirCaracter(idN.value)">
+    <input type="button" name="letraM" value="M"id="idM" onclick="escribirCaracter(idM.value)">
+    <input type="button" name="BORRAR" value="BORRAR" onclick=" borrar()">
+    
+    <br />
+    <input type="button" name="BOTONNUM" value="?123" onclick="cambioTecladoNumerico()">
+    <input type="button" name="MINUSCULAS" value="MIN" onclick="tecladoMinuscula(MINUSCULAS.value)">
+    <input style="padding-left: 78px; padding-right: 60px;" type="button" name="BOTONSPACE" value=" " onclick="tecladoMayuscula(BOTONSPACE.value)">
+    <input type="button" name="PUNTO" value="." onclick="escribirCaracter(PUNTO.value)">
+    <input type="button" name="ENTER" value="ENTER" onclick="escribirCaracter(ENTER.value)">
+    <br/>
+    <input type="button" name="BOTONINIZIALIZAR" value="INIZIALIZAR" onclick="escribirCaracter(idQ.value)">
+    
+    
+  
+    
+</form>
+    
+<p id="numeroCaracter"></p>
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ejercicio 22</title>
+</head>
+
+<body>
+<h2>22. Crear tres ejemplos en los que realiza
+la ejecución del operador in.</h2>
+
+<script type="text/javascript">
+  //matriz
+  matriz=["alumnos","profesores","aulas","mesas","sillas","pizarras"];
+  //buscar posicion 5
+  if (5 in matriz) {
+    document.write("existe un valor en la posicion 5");
+  }else{
+    document.write("no hay valor");
+  }
+  document.write("<br />");
+  // saber si es un string
+  var cero=matriz[0];
+  if (typeof(cero)==="string") {
+    document.write("es una cadena");
+  }else{
+    document.write("no es una cadena");
+  }
+  document.write("<br />");
+  //buscar aulas en la matriz.
+  if (matriz.indexOf("aulas")===-1) {
+    document.write("no existe aulas en la matriz");
+  }else{
+   document.write("exite aulas en la matriz"); 
+  }
+</script>
+
+
+</body>
+</html>

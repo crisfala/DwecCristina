@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ejercicio 15</title>
+</head>
+
+<body>
+<h2>Realizar un programa que pida la introducción de un número, crear una función que 
+determine si el valor introducido es numérico o cadena, si no es numérico mostrar un 
+mensaje “Valor erróneo” y volver a solicitar valor.Si el valor es numérico crear 
+una función NumeroPrimo(num), averigüe si ese número es primo, indicándolo con 
+mensajes que se produzcan en el cuerpo de la función principal, 
+el resultado, de la cadena de salida.</h2>
+<script type="text/javascript">
+     var num;
+      num=prompt("dame un numero");
+     while(isNaN(num)){
+        alert("valor erroneo");
+        num=prompt("dame un numero");
+        }
+        document.write("el numero es:"+num+"<br />");
+        NumeroPrimo(num);
+        function NumeroPrimo(num){
+            primo=false;
+            for( i=2;i<=num/2;i++){
+                if(num%i===0){
+                    primo=false;
+                }else{
+                    primo=true;
+                }
+            }
+            if(primo){
+                document.write("es pirmo");
+                
+            }else{
+                document.write("no es primo");
+            }
+        }
+        
+    
+</script>
+
+
+</body>
+</html>

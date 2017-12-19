@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+
+<body>
+    <p id="verResultado">SALIDA</p>
+<script>
+    var t=2000, cuenta=0;
+    
+    vTiempo=setInterval(verHora(),t);
+    
+    function verHora(){
+            salida=document.getElementById("verResultado");
+            salida.innerHTML=Date()+" Cuenta "+cuenta;
+            cuenta+=1;
+            if (cuenta==5){
+                clearInterval(vTiempo);
+            }
+    }
+    
+    
+</script>
+
+
+</body>
+</html>
+
+    

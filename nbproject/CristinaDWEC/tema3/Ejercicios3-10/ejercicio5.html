@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ejercicio 5</title>
+</head>
+
+<body>
+<h1>5.Escribir  el  código  de  una  función  a  la  que  se  pasa  como  parámetro  un  número  entero  y  devuelve 
+como resultado una cadena de texto que indica si el número es par o impar. Mostrar por pantalla el
+resultado  devuelto  por  la  función.  Si  se  pasa  cualquier  otro  tipo  de  dato  debe  saltar  a  la  función 
+ErrorTipoDatos() y mostrar el mensaje de error al introducir el tipo de datos.</h1>
+<script type="text/javascript">
+    
+    function ErrorTipoDatos() {
+        document.write("error, no es un numero");
+    }
+    
+    function esPar(num){
+            if (isNaN(num)) {
+                ErrorTipoDatos();
+            }else{
+                if (num%2==0) {
+                document.write("el numero es par");
+                }else{
+                    document.write("el numero es impar");
+                }
+                
+            }
+    }
+    var num;
+    num=prompt("dame un numero");
+    esPar(num);
+    
+</script>
+
+
+</body>
+</html>

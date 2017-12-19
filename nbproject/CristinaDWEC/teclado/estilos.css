@@ -1,0 +1,10 @@
+input{
+    color: #EA2861;
+}
+#letrasTeclado{
+    border: solid;
+    border-color: #B013D3;
+    padding: 10px;
+    width: 380px;
+    background-color: #56143C;
+}

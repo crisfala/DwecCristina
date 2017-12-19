@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ejercicio 19</title>
+</head>
+
+<body>
+<h1>–Definir prototipos de configuración de red-ConfiRed.</h1>
+<script type="text/javascript">
+    var mascara="255.255.255.0"
+    //separo por los puntos la cadena
+    var mascara2=mascara.split(".");
+    var num=parseInt(mascara2[0]);
+    var binario
+    binario=num.toString(2);
+    var binario2=binario.split("");
+    //contador
+    var con=0;
+    for(var i=0;i<binario2.length;i++){
+        if (binario2[i]==1) {
+            con++;
+        }
+    }
+    document.write("total de numero de redes: "+con);
+</script>
+
+</body>
+</html>

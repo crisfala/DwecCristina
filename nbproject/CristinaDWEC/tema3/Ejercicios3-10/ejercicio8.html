@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ejercicio 8</title>
+</head>
+
+<body>
+<h2>8.Escribe un script que contenga un párrafo y cinco botones. Cada uno de los
+botones debe tener como etiqueta el nombre de un color y al pulsarlo pondrá el color 
+del párrafo del mismo color que indica</h2>
+
+<p style="font-size:20px;" id="parrafo"> Hola Baldomero, soy cris.</p>
+<input type="button" id="rosa" value="rosa" onclick="colores('#DE50E0')">
+<input type="button" id="verde" value="verde" onclick="colores('#2AED37')"/>
+<input type="button" id="azul" value="azul" onclick="colores('#211EEA')"/>
+<input type="button" id="morado" value="morado" onclick="colores('#946FBC')"/>
+<input type="button" id="amarillo" value="amarillo" onclick="colores('#DEE822')"/>
+<script type="text/javascript">
+   function colores(color){
+     var parrafo=document.getElementById('parrafo');
+     parrafo.style.color=color; 
+   }
+    
+    
+</script>
+
+</body>
+</html>

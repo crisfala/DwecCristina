@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ejercicio 6</title>
+</head>
+
+<body>
+    <h2>6.Crear el código JavaScript que cumpla con las siguientes funciones:</h2>
+<form name="formulario" onsubmit="return validarFormu()">
+    <p>
+        <label>Nombre:</label>
+        <input type="text" id="nombre" name="nombre" />
+    </p>
+    <p>
+        <label>Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos"/>
+        
+    </p>
+    <p>
+        <label>Email:</label>
+        <input type="text" id="email" name="email"/>
+    </p><br />
+    
+        <input type="submit" value="enviar" onclick="validarNom(); validarApelli(); validarEmail();"/>
+</form>
+
+<script>
+    function validarNom() {
+    var nom=true;
+    var nombre=document.getElementById("nombre");
+    var errorNom=document.getElementById("errorNom");
+    if (nombre.value.trim().length >15 || nombre.value.trim().length <=0 ) {
+        nom=false
+    }
+    if (!nom) {
+        if (!errorNom) {
+            errorNom=document.createElement("span");
+            errorNom.setAttribute("id","errorNom");
+            errorNom.style.backgroundColor="orange";
+            errorNom.textContent="Error maximo 15 caracteres";
+            nombre.insertAdjacentElement('afterend',errorNom);
+        }
+        }else{
+            if (errorNom) {
+                document.getElementById("errorNom").remove();
+            }
+            }
+    return nom;
+    }
+    
+    function validarApelli() {
+        var apelli=true;
+        var apellidos=document.getElementById("apellidos");
+        var errorApelli=document.getElementById("errorApelli");
+    if (apellidos.value.trim().length >30 || apellidos.value.trim().length <=0 ) {
+        apelli=false
+    }
+    if (!apelli) {
+        if (!errorApelli) {
+            errorApelli=document.createElement("span");
+            errorApelli.setAttribute("id","errorApelli");
+            errorApelli.style.backgroundColor="orange";
+            errorApelli.textContent="Error maximo 30 caracteres";
+            apellidos.insertAdjacentElement('afterend',errorApelli);
+        }
+        }else{
+            if (errorApelli) {
+                document.getElementById("errorApelli").remove();
+            }
+            }
+    return apelli;
+        
+    }
+    
+    function validarEmail() {
+    var emailValido=true;
+    var path=/@/;
+    var email=document.getElementById("email");
+    var errorEmail=document.getElementById("errorEmail");
+    var mensaje="";
+    if (email.value.trim().length >35 || email.value.trim().length <=0 ) {
+        emailValido=false
+        mensaje="error maximo 35 caracteres";
+    }
+    else if (!path.test(email.value)) {
+        emailValido=false;
+        mensaje="error, falta @";
+    }
+    if (!emailValido) {
+        if (!errorEmail) {
+            errorEmail=document.createElement("span");
+            errorEmail.setAttribute("id","errorEmail");
+            errorEmail.style.backgroundColor="orange";
+            errorEmail.textContent=mensaje;
+            email.insertAdjacentElement('afterend',errorEmail);
+        }else{
+            errorEmail.textContent=mensaje;
+        }
+        }else{
+            if (errorEmail) {
+                document.getElementById("errorEmail").remove();
+            }
+            }
+    return emailValido;
+        
+    }
+    
+    function validarFormu() {
+        var formuValido=true;
+        if (!(validarApelli()&& validarEmail()&& validarNom())) {
+            formuValido=false;
+        }
+        return formuValido;
+    }
+    
+    
+</script>
+</body>
+</html>

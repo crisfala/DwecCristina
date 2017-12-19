@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ejercicio 4</title>
+</head>
+
+<body>
+<h2>
+Crear  un  documento  web con dos formularios.Uno  tendrá la  información  de  alta  para 
+registrarse en una empresa de búsqueda de viajes. El segundo formulario tendrá los datos de 
+registro de datos bancarios. El motivo de disponer de dos formularios es debido al 
+procesamiento de la información en el servidor. La página del servidor, alta. Php se encargará 
+de  guardar los datos del alta  de  un nuevo usuario mientras que  la página pasarelaPago.php
+almacenará información de pago asociada al usuario.
+</h2>
+
+<form id="formulario" method="post" onsubmit="return validacion()">
+    <p>
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required="required" placeholder="introduce un texto"  />
+    </p>
+     <p>
+        <label for="pass">Contraseña:</label>
+        <input type="password" id="pass" name="pass" required="required" placeholder="contraseña" />
+    </p>
+      <p>
+        <label for="pass">Introduce ota vez la contraseña:</label>
+        <input type="password" id="pass" name="pass" required="required" placeholder="contraseña"/>
+      </p>
+     
+     
+     <input type="button" name="registrarse"  value="registrarse" onclick="valida()"/>
+        
+</form>
+<script>
+ function valida(){
+    var usuario=document.getElementById('usuario');
+    var pass=document.getElementById('pass');
+    
+    if((usuario.value==="") || (pass.value==="")){
+        document.write("el usuario y la contraseña no pueden estar vacios!!");
+    }
+    else{
+        document.write("todo correcto");
+    }
+    
+    
+ }
+</script>
+
+</body>
+</html>

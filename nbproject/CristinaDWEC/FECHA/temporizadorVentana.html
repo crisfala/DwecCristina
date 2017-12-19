@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Cuanto tiempo tener abirta una ventana</title>
+</head>
+
+<body>
+<!--a.prompt b.fechas en milisegundos c.comparador de tiempo d. cerrar ventana  -->
+<script type="text/javascript">
+    var leerTiempo=prompt("dame el tiempo en segundos que debe transcurrir antes de cerrar la ventana");
+    var tiempoInicial= new Date();
+    var miliActual=tiempoInicial.getTime(); //devuelve milisegundos.
+    var tiempoFinal=miliActual+(parseInt(leerTiempo)*1000);
+     var nuevaVentana=window.open();
+     
+    do{
+        let tiempoAhora=new Date
+    ().getTime();
+         if (tiempoFinal<=tiempoAhora){
+            nuevaVentana.close();
+            break;
+         }
+    }while(true);
+    /*var nuevaVentana=window.open();
+    var leerTiempo=prompt("dame el tiempo en segundos que debe transcurrir antes de cerrar la ventana");
+    var cierra=setTimeout(
+    function(){
+        window.close(); o nuevaVentana.close();
+    })(parseInt(leerTiempo)*1000);*/
+  
+</script>
+    
+    
+
+</body>
+</html>

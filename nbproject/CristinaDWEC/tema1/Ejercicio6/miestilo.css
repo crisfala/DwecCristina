@@ -1,0 +1,164 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: verdana;
+    
+}
+
+body{
+    background-color: #c0c0c0;
+}
+
+div.caja {
+    width:100%;
+    height:100%;
+      
+}
+
+header{
+    height: 50px;
+    background-color: black;
+    color: #ffffff;
+    
+   
+}
+
+div.enlace a{
+    margin: auto;
+    float: left;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #ffffff;
+    margin-top: 10px;
+}
+div.sub{
+   float: right;
+   margin-top: 10px;
+}
+header.publi{
+    width: auto;
+    height: 180px;
+    background-color: #121B49;
+}
+img.amazon{
+    width: 220px;
+    height: 160px;
+    margin-top: 10px;
+}
+nav .nav{
+     background-color:#969696;
+     height: 45px;
+     width: 100%;
+}
+
+ #hd {
+     height: 40px;
+    font-family:Arial;
+    }
+ ul, ol {
+    list-style:none;
+    }
+ .nav > li {
+    float:left;
+    }
+  .nav li  {
+    background-color:#969696;
+    color:#ffffff;
+    text-decoration:none;
+    padding:10px 12px;
+    display: block;
+    }
+ .nav li a:hover {
+    background-color:#F4EBEB;
+    }
+ .nav li ul {
+    display:none;
+    position:absolute;
+    min-width:140px;
+    }
+ .nav li:hover > ul {
+    display:block;
+    }
+ .nav li ul li {
+    position:relative;
+    }
+ .nav li ul li ul {
+    right:-140px; top:0px;
+    }
+li.img{
+    float: right;
+    
+}
+li.buscar{
+    margin-left: 40px;
+}
+img.flecha{
+    float: right;
+    width: 10px;
+    margin-top: 10px;
+}
+h6{
+    color: #8080ff;
+    font-style: italic
+}
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+    font-size: xx-large;
+}
+
+section{
+    clear: both;
+    width:75%;
+    height: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    float: left;
+    
+}
+
+ h2{
+    margin-left: 300px;
+    color:blue;
+}
+
+ p {
+    text-align: center;
+}
+
+a.html5{
+      color:#585858;
+}
+
+aside{
+    width: 300px;
+    height: auto;
+    margin-top: 10px;
+    background-color: #c0c0c0;
+    float: right;
+}
+
+a.boton{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 10px;
+    color: #ffffff;
+    background-color: #474747;
+    border-radius: 12px;
+    border: 2px solid #808080;
+
+}
+
+p.blanco{
+    border: solid;
+    background-color: #ffffff;
+    padding: 5px;
+    border-color: #ffffff; 
+}
+
+a.boton:hover{
+    background-color: #ff80c0;
+    color: #737373;
+}

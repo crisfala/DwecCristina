@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ejercicio 12</title>
+</head>
+
+<body>
+<h2>12.
+Realizar un programa que, mediante una función denominada intercambio(
+num1,num2) se intercambian los valores,de dos variables enteras que se rellenaron en la función 
+principal.</h2>
+<script type="text/javascript">
+    var num1;
+    var num2;
+    num1=prompt("dame un numero");
+    num2=prompt("dame un segundo numero");
+    document.write("los numeros que se han dado son: "+num1+ " es el primero y "+num2+" es el segundo</br>");
+    cambio(num1,num2);
+    
+    function cambio(num1,num2){
+        var aux;
+        aux=num1;
+        num1=num2;
+        num2=aux;
+        document.write("el primer numero es "+num1+" y el segundo es "+num2);
+    }
+</script>
+</body>
+</html>

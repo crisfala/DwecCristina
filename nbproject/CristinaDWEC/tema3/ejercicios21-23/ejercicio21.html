@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ejercicio 21</title>
+</head>
+
+<body>
+<h2>21. Realizar las siguientes ejecuciones con try{} cath{} y
+recoger el error, el número y mostrar una alert con el número de error.</h2>
+<script type="text/javascript">
+  var num;
+  
+//entre cero
+function entreCero(num) {
+    num=prompt("dame un número: ");
+    try{
+        while (isNaN(num)) {
+            alert("error!!");
+             num=prompt("error,dame un numero: ");
+        }
+        if (num/0==Infinity)throw "division entre cero"; 
+        
+    }catch(error){
+        document.write(num+"<br />");
+        document.write("error");
+    }    
+}
+entreCero();
+
+</script>
+
+
+</body>
+</html>

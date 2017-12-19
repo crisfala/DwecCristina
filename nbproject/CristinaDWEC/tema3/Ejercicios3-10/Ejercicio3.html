@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            /*
+             * Leer una cadena de texto mediante el método prompt() y generar un array con las palabras que 
+                contiene. Posteriormente, mostrar la siguiente información: 
+                 Número de palabras 
+                 Primera palabra y última palabra 
+                 Las palabras colocadas en orden inverso 
+                 Las palabras ordenadas de la a la z 
+                 Las palabras ordenadas de la z a la a 
+             */
+            var cadena = prompt("introduce una cadena de texto");
+            var arrayCadena=cadena.split(" ");//Hacemos que cada palabra de la cadena de texto sea un elemento del array
+                for(var valor of arrayCadena){
+                    document.write(valor+"<br>");
+                }
+            
+            document.write("El numero de palbras de la cadena es: "+arrayCadena.length+"<br>"); //devuelve la longitud de lel array
+            document.write("La primera palabra es: " + arrayCadena[0]+"<br>");//devuelve el primer elemento del array
+            document.write("La ultima palabra es: " + arrayCadena[arrayCadena.length-1]+"<br>");//devuelve el ultimo elemento del array
+            document.write("La cadena en orden inverso es: " + arrayCadena.reverse()+"<br>");//devuelve el array en el orden inverso
+            document.write("Las palabras ordenadas de la a a la z son: " + arrayCadena.sort()+"<br>");//devuelve el array ordenado de la a a la z
+            document.write("Las palabras ordenadas de la z a la a son: " + arrayCadena.sort().reverse()+"<br>");//devuelve el array ordenado de la z a la a
+            
+         
+
+        
+        
+         
+         
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ejercicio </title>
+</head>
+
+<body>
+<h2>Realizar la petición me diante el método GET, analizando la cadena QueryString generada en 
+la petición.</h2>
+<form name="formulario" method="get">
+    <p>
+        <label  for="nombre"name="nombre">Nombre:</label>
+        <input type="text" name="nombre" id="nombre"/>
+    </p>
+        <input type="submit" value="enviar" />
+</form>   
+<script>
+    var url=document.URL;
+    console.log(url);
+    //se añade a un array a partir de "?"
+    var signo=url.split("?");
+    console.log(signo);
+    //utilizar la parte que queda y pasar a string
+    var siguiente=signo.splice(1);
+    console.log(siguiente);
+    var cadena=siguiente.join();
+    console.log(cadena);
+    //partir por"&" y convierte a array
+    var signo2=cadena.split("&");
+    console.log(signo2);
+    var signo2Otro=signo2.splice(-1);
+    console.log(signo2Otro);
+    
+    //nombre
+    var nombre1=signo2.join();
+    var ANombre=nombre1.split("=");
+    var nombre=ANombre.splice(-1);
+    document.write(nombre);
+</script>
+</body>
+</html>

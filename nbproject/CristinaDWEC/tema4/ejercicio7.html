@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>ejercicio 7</title>
+</head>
+
+<body>
+<form name="formu" action="">
+    <p>
+        <label for="tarjeta">Tarjeta:</label>
+        <select name="tarjeta" id="tarjeta">
+            <option>Master Card</option>
+            <option>Visa</option>
+            <option>American Express</option>
+            <option>Discover</option>
+        </select>
+    </p>
+    <p>
+        <label>Numero de la tarjeta</label>
+        <input type="text" id="numTarj" name="numTarj"/>
+    </p><br />
+    <input type="submit" name="enviar" value="enviar" id="enviar"/>
+    
+</form>
+
+<script>
+  var tarjeta=document.getElementById("tarjeta");
+  var tipo=tarjeta.value;
+  var numero=document.getElementById("numTarj").value;
+  tarjeta.addEventListener('change',function(){
+    tipo=tarjeta.value;
+    console.log(tarjeta.value);
+    });
+  
+  function validaTarjeta(numero) {
+    validaNumero=true;
+    if (isNaN(numero)) {
+        validaNumero=false;
+    }else{
+        //coger solo immpares
+        var impares=[];
+        var pares=[];
+        // guarda pares
+       for(var i=1;i< numero.length;i+=2){
+            pares.push(numero[i]);
+        }
+        //guarda impares
+        for(var j=0;j< numero.length;j+=2){
+            impares.push(numero[j]);
+        }
+        // paso3. multiplicaciones impares
+        for(var k=0;k<=impares.length;k++){
+            var num=impares[k]*=2;
+            if (num>9) {
+                impares[k]-=9;
+            }
+        }
+        //Paso 4. Ahora sumamos los resultados anteriores con los números de las
+        //posiciones pares.
+        
+        total=0;
+        for(var l=0;l<=impares.length;l++){
+            for (var m=0;m<pares.length;m++){
+                total=total+impares[l];
+                total=totales+pares[m];
+            }
+        }
+        if (total % 10 !=0) {
+            validaNumero=false
+        }
+        console.log(validaNumero ? "numero valido" : "numero no valido");
+    }
+    return validaNumero;
+  }
+    
+</script>
+
+
+</body>
+</html>

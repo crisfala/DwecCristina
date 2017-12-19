@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ejercicio 11</title>
+</head>
+
+<body>
+    <h1>ejercicio 11</h1>
+<script>
+/*
+Dada una frase:
+"Yo  creo  que  la  gente,  cuando  es  inteligente  y  completamente  normal,  no  debe  pretender  el 
+ser rara y extraña, porque llega al absurdo inventado."
+Pío Baroja
+a)Contar el número de palabras que contiene una frase. 
+b)Contar el número de caracteres totales.
+c)Contar el número de vocales que contiene la frase, cuantas (a,e,i,o,u).
+d)Contar si existen  comas, puntos.
+e)Caracteres en mayúsculas que comienzan frases.
+*/
+
+var frase="Yo creo que la gente, cuando es inteligente y completamente normal, no debe pretender el ser rara y extraña, porque llega al absurdo inventado.";
+var array=frase.split(" ");
+//cuenta el numero de palabras
+var palabras=array.length;
+//quita espacios
+var sinEspacios=array.join("");
+//combierte cadena sin espacios en un arrray cada palabra en un elemento
+var miArray=sinEspacios.split("");
+var caracteres=miArray.length;
+
+frase.toLocaleLowerCase();
+var A=0;
+var E=0;
+var I=0;
+var U=0;
+var O=0;
+var totalVocales=0;
+var comas=0;
+var puntos=0;
+
+for(i=0;i<frase.length;i++){
+    if (frase.charAt(i)=="a") {
+         A++;
+         totalVocales++;
+    }
+    if (frase.charAt(i)=="e") {
+         E++;
+         totalVocales++;
+    }
+    if (frase.charAt(i)=="i") {
+         I++;
+         totalVocales++;
+    }
+    if (frase.charAt(i)=="o") {
+         O++;
+         totalVocales++;
+    }
+    if (frase.charAt(i)=="u") {
+         U++;
+         totalVocales++;
+    }
+     if (frase.charAt(i)==",") {
+         comas++;
+    }
+     if (frase.charAt(i)==".") {
+         puntos++;
+    }
+
+}
+   document.write("la frase es:"+frase+"<br />");
+   document.write("contiene : "+palabras+ " palabras"+"<br />");
+   document.write("contiene : "+caracteres+ " caracteres"+"<br />");
+   document.write("contiene : "+totalVocales+ " vocales"+"<br />");
+   document.write("contiene : "+A+ " vocales a"+"<br />");
+   document.write("contiene : "+E+ " vocales e"+"<br />");
+   document.write("contiene : "+I+ " vocales i"+"<br />");
+   document.write("contiene : "+O+ " vocales o"+"<br />");
+   document.write("contiene : "+U+ " vocales u"+"<br />");
+   document.write("total de puntos: "+puntos+" y total de comas: "+comas);
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ejercicio 9</title>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+     <link rel="stylesheet" type="text/css" href="estilo9.css">
+</head>
+
+<body>
+<form method="get" action=>
+    
+    <p>
+        <label>Numero de tickets, maximo 10:</label>
+        <input type="number" name="ticket" id="ticket" value="1" step="1" min="1" max="10"/><br />
+        <label>Servicio de cenas:</label>
+        <input type="number" value="1" step="0.5" min="1" max="200" name="cena" id="cena"/><br />
+    </p>
+    <br />
+    <p>
+        <label>Numero de la tarjeta de credito:</label>
+        <input type="text" maxlength="16" size="16" name="tarejeta" id="tarjeta"/><br />
+        <label>Fecha de caducidad:</label>
+        <input type="text" maxlength="7" size="7" name="caducidad" id="caducidad"/><br />
+    </p>
+    <br />
+    <p>
+        <label>Nombre:</label>
+        <input type="text" name="nombre" id="nombre" size="30"/><br />
+        <label>Direccion:</label>
+        <input type="text" name="direccion" id="direccion" size="30"/><br />
+        <label>Ciudad:</label>
+        <input type="text" name="ciudad" id="ciudad"/><br />
+        <label>Tipo de Via:</label>
+        <input type="text" id="tipo" name="tipo" maxlength="2" size="2" pattern="[A-W]{2}"/><br />
+        <label>CP:</label>
+        <input type="text" maxlength="5" pattern="0-9{5}"/> <a href="https://es.wikipedia.org/wiki/Anexo:Provincias_de_Espa%C3%B1a_por_c%C3%B3digo_postal">Enlace a codigos</a><br />
+    </p><br />
+    <input type="submit" value="comprar tickets!!"/>
+</form>
+<script>
+     function validaTarjeta() {
+    var numero=document.getElementById("tarjeta").value;
+    validaNumero=true;
+    if (isNaN(numero)) {
+        validaNumero=false;
+    }else{
+        //coger solo immpares
+        var impares=[];
+        var pares=[];
+        // guarda pares
+       for(var i=1;i< numero.length;i+=2){
+            pares.push(numero[i]);
+        }
+        //guarda impares
+        for(var j=0;j< numero.length;j+=2){
+            impares.push(numero[j]);
+        }
+        // paso3. multiplicaciones impares
+        for(var k=0;k<=impares.length;k++){
+            var num=impares[k]*=2;
+            if (num>9) {
+                impares[k]-=9;
+            }
+        }
+        // Ahora sumamos los resultados anteriores con los números de las posiciones pares.
+        
+         var total=0;
+        for(var l=0;l<=impares.length;l++){
+            for (var m=0;m<pares.length;m++){
+                total=total+impares[l];
+                total=totales+pares[m];
+            }
+        }
+        if (total % 10 ==0) {
+            validaNumero=false
+        }
+        console.log(validaNumero ? "numero valido" : "numero no valido");
+    }
+    return validaNumero;
+  }
+    
+</script>
+
+</body>
+</html>

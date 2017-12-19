@@ -1,0 +1,41 @@
+#visor{
+    float: left;
+    text-align:right;
+    margin-left: 30px;
+    width: 160px;
+}
+
+#borrar{
+    float: left;
+    width: 80px;
+    margin-left: 10px;
+   
+}
+
+#botonBasico{
+    width: 80px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+#botonBasico2{
+    width: 80px;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 4px;
+    margin-left: 10px;
+    color:  #E32FED;
+
+}
+
+div{
+    padding: 20px;
+    background-color: #def6ca ;
+    width: 400px;
+    border: double;
+    border-color:#f497da;
+    text-align: center;
+    margin: auto;
+}
+

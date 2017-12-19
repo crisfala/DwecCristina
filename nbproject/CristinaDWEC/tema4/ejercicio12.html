@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="miFormulario">
+        <div>
+             <script>
+            window.addEventListener('load', miFormulario, false);
+            function miFormulario() {
+                //crea etiqueta form
+                var x = document.createElement("FORM");
+                //agrega atributos
+                x.setAttribute("id", "miFormulario");
+                document.body.appendChild(x);
+                label = document.createElement("label");
+                label.setAttribute("name", "nombre");
+                label.innerHTML = "nombre<br/>";
+                document.getElementById("miFormulario").appendChild(label);
+                y = document.createElement("input");
+                y.setAttribute("type", "text");
+                y.setAttribute("name", "nombre");
+                y.setAttribute("id", "nombre");
+                y.setAttribute("class", "nombre");
+                y.setAttribute("value", " ");
+                //agregar al documento
+                document.getElementById("miFormulario").appendChild(y);
+                x.appendChild(y);
+                //apellidos
+                x.appendChild(document.createElement("br"));
+                label2 = document.createElement("label");
+                label2.setAttribute("name", "password");
+                label2.innerHTML = "password<br/>";
+                document.getElementById("miFormulario").appendChild(label2);
+                z = document.createElement("input");
+                z.setAttribute("type", "password");
+                z.setAttribute("name", "pass");
+                z.setAttribute("id", "pass");
+                z.setAttribute("class", "pass");
+                z.setAttribute("value", " ");
+                //agregar al documento
+                document.getElementById("miFormulario").appendChild(z);
+                x.appendChild(z);
+            }
+        </script>
+        </div>
+    </body>
+</html>

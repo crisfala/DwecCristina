@@ -1,0 +1,55 @@
+<html>
+<head lang="en">
+     <meta charset="UTF-8">
+    <title>ejercicio 18</title>
+</head>
+
+<body>
+<form action="" name="formulario">
+    <label for="nombre">Nombre:</label><br/>
+    <input type="text" id="nombre"/><br/>
+    <label for="apellidos">Apellidos:</label><br/>
+    <input type="text" id="apellidos"/>
+</form>
+
+<button type="button" id="mayus" value="Mayus">Mayusculas</button>
+<button type="button" id="minus" value="Minus">minusculas</button>
+
+<script>
+    var foco='';
+    
+    function mayusculas(cadena) {
+        if (foco !== '') {
+            texto=document.getElementById(foco).value.toUpperCase();
+            document.getElementById(foco).value=texto;
+        }
+    }
+    
+    function minusculas(cadena) {
+        if (foco !== '') {
+            texto=document.getElementById(foco).value.toLowerCase();
+            document.getElementById(foco).value=texto;
+        }
+    }
+    
+    function focoNombre() {
+        foco="nombre";
+    }
+    
+    function focoApellido() {
+        foco="apellidos";
+    }
+    
+    var nom=document.getElementById('nombre');
+    nom.addEventListener('focus',focoNombre);
+    var apelli=document.getElementById('apellidos');
+    apelli.addEventListener('focus',focoApellido);
+    
+    var botonMayus=document.getElementById('mayus');
+    botonMayus.addEventListener('click',mayusculas);
+    var botonMinus=document.getElementById('minus');
+    botonMinus.addEventListener('click',minusculas);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>ejercicio 24</title>
+</head>
+
+<body>
+<h2>24. Crear un prototipo (nombreAlumno, Edad, Sexo, estudios
+[“ESO”,”SMR”,”BACHILLERATO”] y además  con una función cierre
+o cerradura, que se encuentre dentro de un prototipo y 
+además que la función cerradura contenga las propiedades, algunas
+como consecuencia del cálculo de valores (notaMediaESO=5, Moda=7,
+FrecuenciaModa=3). Los valores se encuentran almacenados en una 
+var MatrizNotas[]. Crear el prototipo y realizar una instancia a valores 
+con un alumno y 5 notas.</h2>
+
+<script type="text/javascript">
+    var media=0;
+    function Alumno(nombreAlumno,edad,sexo,estudios) {
+        this.nombreAlumno=nombreAlumno;
+        this.edad=edad;
+        this.sexo=sexo;
+        this.estudios=estudios;
+        return "nombre: "+nombre+", edad: "+edad+", sexo: "+sexo+",estudios: "+estudios;
+    }
+    function calcular(){
+        var MatrizNotas=[];
+        var suma=0;
+        for (i=0;i<5;i++) {
+            MatrizNotas[i] = Number(prompt("Introduzca una nota de 5 totales:"));				
+				suma =suma + MatrizNotas[i];
+        }
+            document.write(" suma total es:" +suma+ "<br /> la media es: " + suma/5);
+            
+        }
+    var nombreAlumno=prompt("dame un nombre");
+    var edad=prompt("dame la edad");
+    var sexo=prompt("dame el genero");
+    estudios=prompt("dame los estudios: ");
+    var estudi=["BACHILLERATO","ESO","SMR"];
+       while (estudi.indexOf(estudios)==-1) {
+        estudios=prompt("dame los estudios deben ser:ESO, BACHILLERATO o SMR:");
+       }
+    var alumnos=[];
+        alumnos.push(nombreAlumno,edad,sexo,estudios);
+        for( var i=0; i<alumnos.length;i++){
+            document.write(alumnos[i]+"<br />");
+        }
+        document.write("el alumno/a es: "+nombreAlumno+" su edad es: "+edad+" , su genero es: "+sexo+" y cursa: "+estudios+"<br />");
+        calcular();
+    
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ejercicio 2</title>
+</head>
+
+<body>
+<form name="formulario">
+    <p>
+        <label name="nombreApellido">Nombre y Apellidos</label>
+        <input type="text" name="nombreApellido" id="nombreApellido"/>
+         <span id="mensajeNombre"></span>
+    </p>
+    
+    <p>
+        <label for="titulacion">Titulación:</label>
+        <select name="titulacion" id="titulacion">
+            <option value="primaria" selected>Primaria</option>
+            <option value="eso">ESO</option>
+            <option value="bachillerato">Bachillerato</option>
+            <option value="FP">FP</option>
+        </select>
+    </p>
+    
+    <p>
+         <label for="curso">Curso:</label>
+        <select name="curso" id="curso">
+            <option value="primero" selected>Primero</option>
+            <option value="segundo">Segundo</option>
+            <option value="tercero">tercero</option>
+            <option value="cuarto">Cuarto</option>
+            
+        </select>
+     </p>
+    
+    <p>
+        <label name="AnioAcademico">Año Academico</label>
+        <input type="text" name="AnioAcademico" id="AnioAcademico" onblur="comprobarAnio()"/>
+    </p><br />
+    
+        <input type="submit" value="enviar" />
+</form>     
+        <script type="text/javascript">
+            
+             function deshabilitarAnios() {
+            if (this.value === "bachillerato" || this.value === "FP") {
+                curso.children[2].disabled = true;
+                curso.children[3].disabled = true;
+            } else {
+                curso.children[2].disabled = false;
+                curso.children[3].disabled = false;
+            }
+        }
+        
+        titulacion.addEventListener("change", cambiarAnios);
+         
+            
+        </script>
+
+
+</body>
+</html>
